@@ -73,5 +73,5 @@ def 関数名(引数):
 Issuesに挙げてもらえると喜びます！
 
 ### Licence
-This software is released under the MIT License, see LICENSE
+This software is released under the MIT License, see LICENSE<br />
 (MITライセンスで公開してます。仲良く使ってください)
