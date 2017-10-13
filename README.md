@@ -71,3 +71,7 @@ def 関数名(引数):
 こうした方が良いとかは是非受け付けます！
 
 Issuesに挙げてもらえると喜びます！
+
+### Licence
+This software is released under the MIT License, see LICENSE
+(MITライセンスで公開してます。仲良く使ってください)
