@@ -1,5 +1,15 @@
+"""
+templa
+
+Copyright (c) 2017 Yuki Kawasaki
+
+This software is released under the MIT License.
+http://opensource.org/licenses/mit-license.php
+"""
 #!python
 # -*- coding: utf-8 -*-
+
+
 import argparse
 import configparser
 import importlib
@@ -7,12 +17,10 @@ import sys
 from jinja2 import Environment, FileSystemLoader
 
 def main():
+  sys.stdout.flush()
   variables = {}
   hooks= {}
   parser = argparse.ArgumentParser()
-
-  # テンプレートのパス
-  parser.add_argument("path", help="input template directry")
 
   # テンプレートのパス
   parser.add_argument("template", help="input template file")
@@ -29,7 +37,7 @@ def main():
   args = parser.parse_args()
 
   # テンプレート読み込み
-  env = Environment(loader=FileSystemLoader(args.path, encoding='utf8'))
+  env = Environment(loader=FileSystemLoader('.', encoding='utf8'))
   template = env.get_template(args.template)
 
   # iniファイル読み込み
@@ -47,7 +55,7 @@ def main():
 
   # フック処理をインポートして実行
   if args.functions != None:
-    sys.path.append(args.path)
+    sys.path.append('.')
     functions = importlib.import_module(args.functions)
 
     ini_config = configparser.ConfigParser()
