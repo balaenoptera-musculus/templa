@@ -38,7 +38,9 @@ pip install -r templa/packages.txt
 
 ### フック関数のpythonパッケージ(-f 省略可)
 
-* フック関数をまとめたパッケージを指定します(WordPressのfunctions.php的なイメージです)
+* フック関数をまとめたパッケージファイルを指定します(WordPressのfunctions.php的なイメージです)
+
+* カレントディレクトリが起点です。
 
 * フック関数の定義は
 
